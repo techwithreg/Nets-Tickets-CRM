@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nets Tickets - CRM Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Nets Tickets Portal</h1>
+        <nav>
+            <button id="loginBtn">Login</button>
+            <button id="signupBtn">Sign Up</button>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="intro">
+            <h2>Exclusive Ticket Sales</h2>
+            <p>Purchase your Nets tickets today and enjoy premium seating at great prices.</p>
+            <p class="subtle">Please note: Ticket availability is subject to confirmation after your order is placed.</p>
+        </section>
+
+        <section id="ticket-selection">
+            <h2>Available Games</h2>
+            <form id="ticketForm">
+                <label for="game">Select Game:</label>
+                <select id="game" name="game" required>
+                    <option value="knicks" data-price="135">1/21 Knicks vs Nets - $135</option>
+                    <option value="suns" data-price="95">1/22 Suns vs Nets - $95</option>
+                </select>
+
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+
+                <label for="coupon">Coupon Code:</label>
+                <input type="text" id="coupon" placeholder="Enter coupon code (e.g., PB25)">
+
+                <p>Total: $<span id="total">0.00</span></p>
+
+                <p class="subtle">You will receive a confirmation email regarding ticket availability within 24 hours.</p>
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nets Tickets Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
